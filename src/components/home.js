@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Login from './login';
 import Main from './main';
+import { userName, password } from './../constant';
 
 export class Home extends Component {
     state = {
@@ -20,7 +21,7 @@ export class Home extends Component {
 
     handleOnClick = () => {
         const { uname, pass } = this.state;
-        if (uname === 'shadi' && pass === '123') {
+        if (uname === userName && pass === password) {
             this.setState({ isLogin: true });
         }
     };
